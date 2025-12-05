@@ -1,0 +1,183 @@
+/* --- PALETA DE COLORES --- */
+:root {
+    --color-blanco-calido: #a6a195;
+    --color-ocre: #CCAA44;
+    --color-verde-oliva: #556B2F;
+    --color-terracota: #B85C4F;
+    --color-taupe: #a18748;
+    --font-serif: 'Georgia', serif;
+    --font-sans: 'Helvetica Neue', sans-serif;
+}
+
+/* --- ESTILOS BASE --- */
+body {
+    font-family: var(--font-sans);
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-blanco-calido);
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* --- ESTILOS DEL HEADER Y NAVEGACIÓN --- */
+.header-nav {
+    background-color: var(--color-taupe); /* Fondo grisáceo del logo */
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-blanco-calido);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.logo {
+    /* Ajusta el tamaño real de tu logo aquí */
+    height: 40px; 
+    margin-right: 10px;
+}
+
+.hostal-name {
+    font-family: var(--font-serif);
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--color-blanco-calido);
+}
+
+.main-menu ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu li a {
+    text-decoration: none;
+    color: var(--color-blanco-calido);
+    padding: 15px 20px;
+    display: block;
+    font-size: 0.95em;
+    transition: background-color 0.3s;
+}
+
+.main-menu li a:hover,
+.main-menu li a.active {
+    background-color: rgba(143, 128, 35, 0.571);
+}
+
+/* Botón de Reservas destacado */
+.btn-reservas {
+    background-color: var(--color-ocre) !important;
+    color: white !important;
+    border-radius: 4px;
+    padding: 10px 25px !important;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.btn-reservas:hover {
+    background-color: var(--color-terracota) !important;
+}
+
+/* --- SECCIÓN INICIO --- */
+.content-section {
+    padding: 40px 0;
+}
+
+.main-title {
+    font-family: var(--font-serif);
+    color: var(--color-verde-oliva);
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.intro-text {
+    line-height: 1.8;
+    font-size: 1.05em;
+    padding-right: 20px;
+}
+
+.values-box {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #eeebe3; /* Un tono ligeramente más oscuro que el fondo */
+    border-left: 5px solid var(--color-terracota);
+}
+
+.values-title {
+    color: var(--color-terracota);
+    font-size: 1.4em;
+    margin-top: 0;
+    font-family: var(--font-serif);
+}
+
+.intro-images {
+    text-align: right;
+}
+
+.main-collage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #444;
+    color: var(--color-blanco-calido);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.8em;
+}
+
+/* --- RESPONSIVE BÁSICO (Para móviles) --- */
+@media (max-width: 768px) {
+    .header-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .main-menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .main-menu li {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .intro-grid {
+        grid-template-columns: 1fr; /* Una sola columna en móviles */
+    }
+    
+    .intro-text {
+        padding-right: 0;
+    }
+    
+    .intro-images {
+        margin-top: 30px;
+        text-align: center;
+    }
+}

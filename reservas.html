@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservas - HOSTAL CIUDAD DE LUZ</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header-nav">
+    <div class="logo-container">
+      <img src="logo-ciudad-de-luz.png.png" alt="Logo Ciudad de Luz" class="logo">
+      <span class="hostal-name">HOSTAL CIUDAD DE LUZ</span>
+    </div>
+    <nav class="main-menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="habitaciones.html">Habitaciones</a></li>
+        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+        <li><a href="experiencias.html">Experiencias</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="reservas.html" class="btn-reservas active">Reservas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="content-section">
+    <div class="container">
+      <h1 class="main-title">Haz tu Reserva</h1>
+      <p>Completa el formulario y asegura tu estancia en Hostal Ciudad de Luz.  
+      También puedes llamarnos al <strong>+34 953 123 456</strong> o escribirnos a <strong>reservas@hostalciudaddeluz.com</strong>.</p>
+      
+      <!-- FORMULARIO -->
+      <form class="reserva-form" action="mailto:reservas@hostaloliva.com" method="post" enctype="text/plain">
+        <label for="nombre">Nombre completo:</label><br>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required><br><br>
+
+        <label for="email">Correo electrónico:</label><br>
+        <input type="email" id="email" name="email" placeholder="tuemail@ejemplo.com" required><br><br>
+
+        <label for="telefono">Teléfono:</label><br>
+        <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000"><br><br>
+
+        <label for="fecha-entrada">Fecha de entrada:</label><br>
+        <input type="date" id="fecha-entrada" name="fecha-entrada" required><br><br>
+
+        <label for="fecha-salida">Fecha de salida:</label><br>
+        <input type="date" id="fecha-salida" name="fecha-salida" required><br><br>
+
+        <label for="habitacion">Tipo de habitación:</label><br>
+        <select id="habitacion" name="habitacion" required>
+          <option value="doble">Habitación Doble</option>
+          <option value="suite">Suite Oliva</option>
+          <option value="familiar">Habitación Familiar</option>
+        </select><br><br>
+
+        <label for="mensaje">Comentarios adicionales:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe aquí tus necesidades especiales..."></textarea><br><br>
+
+        <button type="submit" class="btn-reservas">Enviar Reserva</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 HOSTAL CIUDAD DE LUZ. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
